@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход и регистрация - Свежий Путь</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Свежий Путь">
+                        <span>Свежий Путь</span>
+                    </a>
+                </div>
+                
+                <div class="search">
+                    <form action="catalog.html" method="get">
+                        <input type="text" placeholder="Поиск по каталогу...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                
+                <div class="header-right">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="contacts.html" class="header-link">Контакты</a>
+                    <a href="login.html" class="header-link active">Войти</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигационное меню -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="#pre-order">Предзаказ</a></li>
+                <li><a href="#new-year">Новый год</a></li>
+                <li><a href="#hits">Наши хиты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <div class="auth-page">
+            <div class="auth-container">
+                <!-- Вкладки входа/регистрации -->
+                <div class="auth-tabs">
+                    <button class="auth-tab active" id="loginTab">Вход</button>
+                    <button class="auth-tab" id="registerTab">Регистрация</button>
+                </div>
+                
+                <!-- Форма входа -->
+                <div class="auth-form active" id="loginForm">
+                    <h2>Вход в личный кабинет</h2>
+                    <form id="loginFormElement">
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" placeholder="example@mail.ru" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="loginPassword">Пароль</label>
+                            <input type="password" id="loginPassword" placeholder="Введите пароль" required>
+                            <div class="password-toggle">
+                                <i class="fas fa-eye" id="toggleLoginPassword"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox"> Запомнить меня
+                            </label>
+                            <a href="#" class="forgot-password">Забыли пароль?</a>
+                        </div>
+                        
+                        <button type="submit" class="auth-submit">Войти</button>
+                        
+                        <div class="auth-divider">
+                            <span>Или войдите с помощью</span>
+                        </div>
+                        
+                        <div class="social-auth">
+                            <button type="button" class="social-btn vk">
+                                <i class="fab fa-vk"></i> ВКонтакте
+                            </button>
+                            <button type="button" class="social-btn google">
+                                <i class="fab fa-google"></i> Google
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Форма регистрации -->
+                <div class="auth-form" id="registerForm">
+                    <h2>Создание аккаунта</h2>
+                    <form id="registerFormElement">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Имя</label>
+                                <input type="text" id="firstName" placeholder="Иван" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastName">Фамилия</label>
+                                <input type="text" id="lastName" placeholder="Иванов" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="registerEmail">Email</label>
+                            <input type="email" id="registerEmail" placeholder="example@mail.ru" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" placeholder="+7 (999) 999-99-99" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="registerPassword">Пароль</label>
+                            <input type="password" id="registerPassword" placeholder="Не менее 6 символов" required>
+                            <div class="password-toggle">
+                                <i class="fas fa-eye" id="toggleRegisterPassword"></i>
+                            </div>
+                            <div class="password-strength">
+                                <div class="strength-bar"></div>
+                                <span class="strength-text">Надёжность пароля</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">Подтвердите пароль</label>
+                            <input type="password" id="confirmPassword" placeholder="Повторите пароль" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="acceptTerms" required>
+                                <span>Я согласен с <a href="#">правилами сайта</a> и <a href="#">политикой конфиденциальности</a></span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="subscribeNews">
+                                <span>Подписаться на рассылку о новинках и акциях</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="auth-submit">Зарегистрироваться</button>
+                        
+                        <p class="auth-note">
+                            Регистрируясь, вы получаете доступ к истории заказов, персональным скидкам и быстрому оформлению заказов.
+                        </p>
+                    </form>
+                </div>
+                
+                <!-- Преимущества регистрации -->
+                <div class="auth-benefits">
+                    <h3>Преимущества личного кабинета</h3>
+                    <ul>
+                        <li><i class="fas fa-history"></i> История заказов</li>
+                        <li><i class="fas fa-percent"></i> Персональные скидки</li>
+                        <li><i class="fas fa-bolt"></i> Быстрое оформление заказов</li>
+                        <li><i class="fas fa-heart"></i> Избранные товары</li>
+                        <li><i class="fas fa-gift"></i> Бонусы за покупки</li>
+                        <li><i class="fas fa-truck"></i> Отслеживание доставки</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Свежий Путь</h4>
+                    <p>Свежее начало каждого дня с 2023 года</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Телефон: +7 (123) 456-78-90</p>
+                    <p>Email: info@freshway.ru</p>
+                    <p>Адрес: г. Москва, ул. Свежая, д. 1</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Свежий Путь. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Куки-уведомление -->
+<div class="cookie-notice" id="cookieNotice">
+    <div class="cookie-content">
+        <p>Мы используем файлы cookie для улучшения работы сайта. Оставаясь на сайте, вы соглашаетесь с <a href="#">политикой использования cookie</a>.</p>
+        <div class="cookie-buttons">
+            <button class="btn-accept" id="acceptCookies">Принять</button>
+            <button class="btn-reject" id="rejectCookies">Отказаться</button>
+        </div>
+    </div>
+</div>
+
+<!-- Подключение скриптов должно быть ПОСЛЕ этого блока -->
+<script src="js/script.js"></script>
+</body>
+</html>

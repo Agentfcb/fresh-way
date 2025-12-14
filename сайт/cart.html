@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Свежий Путь</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Свежий Путь">
+                        <span>Свежий Путь</span>
+                    </a>
+                </div>
+                
+                <div class="search">
+                    <form action="catalog.html" method="get">
+                        <input type="text" placeholder="Поиск по каталогу...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                
+                <div class="header-right">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="contacts.html" class="header-link">Контакты</a>
+                    <a href="login.html" class="header-link">Войти</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигационное меню -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="#pre-order">Предзаказ</a></li>
+                <li><a href="#new-year">Новый год</a></li>
+                <li><a href="#hits">Наши хиты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <div class="cart-page">
+            <h1>Корзина</h1>
+            
+            <!-- Если корзина пуста -->
+            <div class="empty-cart" id="emptyCart">
+                <div class="empty-cart-content">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h2>Ваша корзина пуста</h2>
+                    <p>Добавьте товары из каталога, чтобы сделать заказ</p>
+                    <a href="catalog.html" class="btn-to-catalog">Перейти в каталог</a>
+                </div>
+            </div>
+            
+            <!-- Если в корзине есть товары -->
+            <div class="cart-with-items" id="cartWithItems" style="display: none;">
+                <div class="cart-content">
+                    <!-- Список товаров -->
+                    <div class="cart-items-section">
+                        <h2>Товары в корзине</h2>
+                        <div class="cart-items" id="cartItemsList">
+                            <!-- Товары будут добавляться через JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Итоги заказа -->
+                    <div class="cart-summary">
+                        <h2>Итоги заказа</h2>
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Товары (3 шт.)</span>
+                                <span id="itemsTotal">0 ₽</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Доставка</span>
+                                <span id="deliveryCost">0 ₽</span>
+                            </div>
+                            <div class="summary-row discount">
+                                <span>Скидка</span>
+                                <span id="discount">-0 ₽</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Итого</span>
+                                <span id="orderTotal">0 ₽</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Промокод -->
+                        <div class="promo-code">
+                            <input type="text" placeholder="Промокод" id="promoInput">
+                            <button id="applyPromo">Применить</button>
+                        </div>
+                        
+                        <!-- Способ доставки -->
+                        <div class="delivery-options">
+                            <h3>Способ доставки</h3>
+                            <label class="delivery-option">
+                                <input type="radio" name="delivery" value="courier" checked>
+                                <span>Курьерская доставка (300 ₽)</span>
+                            </label>
+                            <label class="delivery-option">
+                                <input type="radio" name="delivery" value="pickup">
+                                <span>Самовывоз (бесплатно)</span>
+                            </label>
+                        </div>
+                        
+                        <!-- Кнопка оформления -->
+                        <button class="checkout-btn" id="checkoutBtn">Перейти к оформлению</button>
+                        
+                        <!-- Дополнительная информация -->
+                        <div class="cart-info">
+                            <p><i class="fas fa-shield-alt"></i> Безопасная оплата</p>
+                            <p><i class="fas fa-truck"></i> Бесплатная доставка от 2000 ₽</p>
+                            <p><i class="fas fa-undo"></i> Возврат в течение 14 дней</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Рекомендуемые товары -->
+                <div class="recommended-products">
+                    <h3>Рекомендуем добавить</h3>
+                    <div class="recommended-grid">
+                        <!-- Рекомендуемые товары -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Свежий Путь</h4>
+                    <p>Свежее начало каждого дня с 2023 года</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Телефон: +7 (123) 456-78-90</p>
+                    <p>Email: info@freshway.ru</p>
+                    <p>Адрес: г. Москва, ул. Свежая, д. 1</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Свежий Путь. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+   
+<!-- Подключение скриптов должно быть ПОСЛЕ этого блока -->
+<script src="js/script.js"></script>
+</body>
+</html>

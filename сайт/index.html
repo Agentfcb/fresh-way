@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свежий Путь - свежее начало каждого дня</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Логотип -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Свежий Путь">
+                        <span>Свежий Путь</span>
+                    </a>
+                </div>
+                
+                <!-- Поиск по каталогу -->
+                <div class="search">
+                    <form action="catalog.html" method="get">
+                        <input type="text" placeholder="Поиск по каталогу...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                
+                <!-- Правая часть шапки -->
+                <div class="header-right">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="contacts.html" class="header-link">Контакты</a>
+                    <a href="login.html" class="header-link">Войти</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигационное меню -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="#pre-order">Предзаказ</a></li>
+                <li><a href="#new-year">Новый год</a></li>
+                <li><a href="#hits">Наши хиты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <!-- Слоган -->
+        <section class="slogan">
+            <h1>Свежее начало каждого дня</h1>
+        </section>
+
+        <!-- Акции (карусель) -->
+        <section class="promotions">
+            <h2>Актуальные акции</h2>
+            <div class="promo-carousel">
+                <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="promo-images">
+                    <div class="promo-item">
+                        <img src="images/promo1.jpg" alt="Акция 1">
+                        <div class="promo-label">Скидка 20%</div>
+                    </div>
+                    <div class="promo-item">
+                        <img src="images/promo2.jpg" alt="Акция 2">
+                        <div class="promo-label">Хит продаж</div>
+                    </div>
+                    <div class="promo-item">
+                        <img src="images/promo3.jpg" alt="Акция 3">
+                        <div class="promo-label">Новинка</div>
+                    </div>
+                    <!-- Добавьте еще 6 изображений для акций -->
+                </div>
+                <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <!-- Категории -->
+        <section class="categories">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-tab="mini-catalog">Мини каталог</button>
+                <button class="tab-btn" data-tab="pre-order">Пред заказ</button>
+                <button class="tab-btn" data-tab="new-year">Новый год</button>
+                <button class="tab-btn" data-tab="hits">Наши хиты</button>
+            </div>
+            
+            <!-- Товары -->
+            <div class="products tab-content active" id="mini-catalog">
+                <h2>Популярные товары</h2>
+                <div class="products-grid">
+                    <!-- Товар 1 -->
+                    <div class="product-card">
+                        <img src="images/product1.jpg" alt="Товар 1">
+                        <h3>Фермерская свинина</h3>
+                        <p class="product-description">Свежее мясо отборных животных, кг</p>
+                        <p class="price">380 ₽</p>
+                        <button class="add-to-cart" data-id="1" data-name="Свежий хлеб" data-price="120">В корзину</button>
+                    </div>
+                    
+                    <!-- Товар 2 -->
+                    <div class="product-card">
+                        <img src="images/product2.jpg" alt="Товар 2">
+                        <h3>Яйца куриные</h3>
+                        <p class="product-description">Свежие яйца прямо с фермы, десяток</p>
+                        <p class="price">130 ₽</p>
+                        <button class="add-to-cart" data-id="2" data-name="Органические овощи" data-price="250">В корзину</button>
+                    </div>
+                    
+                    <!-- Товар 3 -->
+                    <div class="product-card">
+                        <img src="images/product3.jpg" alt="Товар 3">
+                        <h3>Говядина</h3>
+                        <p class="product-description">Мясо крупно рогатого скота</p>
+                        <p class="price">520 ₽</p>
+                        <button class="add-to-cart" data-id="3" data-name="Фермерский сыр" data-price="380">В корзину</button>
+                    </div>
+                    
+                    <!-- Товар 4 -->
+                    <div class="product-card">
+                        <img src="images/product4.jpg" alt="Товар 4">
+                        <h3>Российский сыр</h3>
+                        <p class="product-description">Сыр из самых натуральных инградиентов</p>
+                        <p class="price">230 ₽</p>
+                        <button class="add-to-cart" data-id="4" data-name="Свежевыжатый сок" data-price="180">В корзину</button>
+                    </div>
+                    
+                    <!-- Добавьте больше товаров по аналогии -->
+                </div>
+            </div>
+            
+            <!-- Контент других вкладок (можно наполнить позже) -->
+            <div class="tab-content" id="pre-order">
+                <h2>Предзаказ</h2>
+                <p>Страница в разработке</p>
+            </div>
+            
+            <div class="tab-content" id="new-year">
+                <h2>Новогодние товары</h2>
+                <p>Страница в разработке</p>
+            </div>
+            
+            <div class="tab-content" id="hits">
+                <h2>Наши хиты</h2>
+                <p>Страница в разработке</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Свежий Путь</h4>
+                    <p>Свежее начало каждого дня с 2023 года</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Телефон: +7 (123) 456-78-90</p>
+                    <p>Email: info@freshway.ru</p>
+                    <p>Адрес: г. Москва, ул. Свежая, д. 1</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Свежий Путь. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+   
+<!-- Подключение скриптов должно быть ПОСЛЕ этого блока -->
+<script src="js/script.js"></script>
+</body>
+</html>

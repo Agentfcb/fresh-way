@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Свежий Путь</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Свежий Путь">
+                        <span>Свежий Путь</span>
+                    </a>
+                </div>
+                
+                <div class="search">
+                    <form action="catalog.html" method="get">
+                        <input type="text" placeholder="Поиск по каталогу...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                
+                <div class="header-right">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="contacts.html" class="header-link active">Контакты</a>
+                    <a href="login.html" class="header-link">Войти</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигационное меню -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="#pre-order">Предзаказ</a></li>
+                <li><a href="#new-year">Новый год</a></li>
+                <li><a href="#hits">Наши хиты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <div class="contacts-page">
+            <h1>Контакты</h1>
+            
+            <div class="contacts-content">
+                <!-- Основная контактная информация -->
+                <div class="contact-info-section">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Адрес магазина</h3>
+                            <p>г. Москва, ул. Свежая, д. 1</p>
+                            <p>Ближайшая станция метро: "Фруктовая"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Телефоны</h3>
+                            <p>+7 (123) 456-78-90 — общий</p>
+                            <p>+7 (123) 456-78-91 — доставка</p>
+                            <p>+7 (123) 456-78-92 — оптовые закупки</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Режим работы</h3>
+                            <p>Понедельник - Пятница: 9:00 - 21:00</p>
+                            <p>Суббота - Воскресенье: 10:00 - 20:00</p>
+                            <p>Доставка: ежедневно с 10:00 до 22:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Электронная почта</h3>
+                            <p>info@freshway.ru — общие вопросы</p>
+                            <p>order@freshway.ru — заказы</p>
+                            <p>partners@freshway.ru — сотрудничество</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Карта и форма обратной связи -->
+                <div class="map-form-section">
+                    <!-- Карта -->
+                    <div class="map-container">
+                        <h2>Мы на карте</h2>
+                        <div class="map-placeholder">
+                            <!-- Здесь будет карта -->
+                            <div class="map-image">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <p>Интерактивная карта</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Форма обратной связи -->
+                    <div class="feedback-form">
+                        <h2>Обратная связь</h2>
+                        <form id="feedbackForm">
+                            <div class="form-group">
+                                <label for="feedbackName">Ваше имя</label>
+                                <input type="text" id="feedbackName" placeholder="Иван Иванов" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="feedbackEmail">Email</label>
+                                <input type="email" id="feedbackEmail" placeholder="example@mail.ru" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="feedbackPhone">Телефон</label>
+                                <input type="tel" id="feedbackPhone" placeholder="+7 (999) 999-99-99">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="feedbackTopic">Тема обращения</label>
+                                <select id="feedbackTopic">
+                                    <option value="general">Общий вопрос</option>
+                                    <option value="order">Вопрос по заказу</option>
+                                    <option value="delivery">Доставка</option>
+                                    <option value="quality">Качество товара</option>
+                                    <option value="cooperation">Сотрудничество</option>
+                                    <option value="other">Другое</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="feedbackMessage">Сообщение</label>
+                                <textarea id="feedbackMessage" rows="5" placeholder="Опишите ваш вопрос или предложение..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-feedback">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- FAQ -->
+                <div class="faq-section">
+                    <h2>Часто задаваемые вопросы</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Какой срок доставки?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Доставка по Москве осуществляется в день заказа при оформлении до 18:00. По области — на следующий день.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Есть ли минимальная сумма заказа?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Минимальная сумма заказа для доставки — 500 рублей. При самовывозе минимальной суммы нет.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Можно ли изменить заказ после оформления?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Да, вы можете изменить заказ до момента его сборки. Для этого позвоните по телефону +7 (123) 456-78-90.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Какие способы оплаты вы принимаете?</h3>
+                               
